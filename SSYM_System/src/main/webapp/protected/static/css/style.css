@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+
+/* login.jsp */
+/* ---------------- */
+
+html{
+	background-color: lightskyblue;
+}
+
+body{
+	text-align: center;
+}
+
+.login_inputs{
+	width: 100%;
+	height: 100%;
+}
+
+a{
+	background-color: white;
+	text-align: center;
+}
