@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+form {
+    margin-top: 10%;
+}
+
+#title {
+    border: solid 1px #000;
+    border-radius: 3px;
+}
+
+#comment {
+    border: solid 1px #000;
+    width: 90%;
+    border-radius: 3px;
+}
+
+#flex_box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+input, select {
+    width: 60%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 5px;
+}
+
+/* -------------------------------- */
+
+/* aside */
+
+aside {
+    width: 30%;
+    text-align: end;
+    height: 100%;
+}
+
+#status {
+    margin-top: 10%;
+    border: solid 1px #000;
+    border-radius: 3px;
+    text-align: start;
+}
+
+#priority {
+    margin-top: 10%;
+    border: solid 1px #000;
+    border-radius: 3px;
+    text-align: start;
+}
+
+#responsible_person {
+    margin-top: 10%;
+    border: solid 1px #000;
+    border-radius: 3px;
+    text-align: start;
+}
+/* -------------------------------- */
+
+/* article */
+
+#search {
+    border: solid 1px #000;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+
+#start_date {
+    border: solid 1px #000;
+    border-radius: 3px;
+}
+
+#due_date {
+    border: solid 1px #000;
+    border-radius: 3px;
+}
+
+#labor_cost {
+    border: solid 1px #000;
+    border-radius: 3px;
+}
+
+#progress { 
+    border: solid 1px #000;
+}
