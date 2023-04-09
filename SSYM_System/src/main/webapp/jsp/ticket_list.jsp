@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>チケット一覧画面</title>
 </head>
 <body>
+	<!-- header -->
 
 </body>
 </html>
