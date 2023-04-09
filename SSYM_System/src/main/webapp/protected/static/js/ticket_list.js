@@ -1,0 +1,5 @@
+/**
+ * jsファイル！！！
+ */
+
+ console.log("test");

@@ -41,17 +41,21 @@
  	height: 1px;
  	background-color: #000;
  	margin-top: 2.8vh;
- 	display: block;
+ 	display: inline-block;
 }
 
-#menu{
+#menus{
 	display: none;
 	width: 15vw;
-	height: 100vh;
+	height: 87.5vh;
 	background-color: lightslategray;
 	position: absolute;
-	top: 0px;
+	top: 12.5vh;
 	right: 0px;
+}
+/*--- メニュー閉じ開き ---*/
+#menusOpen{
+	display: block;
 }
 
 #headerMenu{
@@ -61,12 +65,71 @@
 	flex-flow: column;
 	justify-content: space-around;
 	align-items: center;
-	/*
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	*/
 }
 
+/**
+ *  headerIcons.css から一部抜粋、改良
+ */
+
+.headerIcon, .headerIcon:before, .headerIcon:after, .headerIcon i, .headerIcon i:before, .headerIcon i:after { 
+	transition: all 0.4s ease;
+}
+
+
+.menu.headerIcon:after {
+	content: '';
+	position: absolute;
+	top: 6vh;
+	width: 50px;
+	height: 1px;
+	background-color: currentColor;
+}
+
+.menu.headerIcon:before {
+	content: '';
+	position: absolute;
+	top:3vh;
+	width: 50px;
+	height: 1px;
+	background-color: currentColor;
+}
+
+.menu.headerIcon {
+	color: #000;
+	position: absolute;
+	top: 4vh;
+	width: 50px;
+	height: 1px;
+	background-color: currentColor;
+}
+
+.remove.headerIcon:after {
+	content: '';
+	position: absolute;
+	top: 5vh;
+	width: 50px;
+	transform: rotate(-45deg);
+	height: 1px;
+	background-color: currentColor;
+}
+
+.remove.headerIcon:before {
+	content: '';
+	position: absolute;
+	top: 5vh;
+	width: 50px;
+	transform: rotate(45deg);
+	height: 1px;
+	background-color: currentColor;
+}
+
+.remove.headerIcon {
+	color: #000;
+	position: absolute;
+	margin-left: 3px;
+	margin-top: 10px;
+	height: 1px;
+	background-color: currentColor;
+}
 
 
