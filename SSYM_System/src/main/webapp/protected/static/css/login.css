@@ -7,45 +7,56 @@
 
 #loginInputs{
 	position: absolute;
-	left: 25%;
+	left: 20%;
 	top: 35%;
-	right: 0;
+	right: auto;
 	bottom: 0;
 	background-color: orange;
-	width: 50%;
+	
+	width: 60%;
 	height: 40%;
 	text-align: center;
+	
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	
 }
 
 #loginInputs p{
-	margin-top: 5%;
-	font-size: 25px;
+	font-size: clamp(10px, 2.9vw, 26px);
 	width: 100%;
 }
 
 #loginInputs button{
-	top: 5%;
-	font-size: 25px;
-	width: 25%;
+	font-size: clamp(10px, 2.9vw, 26px);
+	width: 30%;
 	padding: 20px;
-	background-color: blue;
-	
+	background-color: rgb(110, 170, 235);
+	height: 55px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #loginInputs input{
-	font-size: 25px;
+	font-size: clamp(10px, 2.9vw, 26px);
 	width: 30%;
 	border:2px grey solid;
-	margin-bottom: 2.5%;
-}
-   
-.toggle-pass{
-    position:absolute;
-    top:50%;
-    right: 10px;
-    transform: translateY(-50%);
 }
 
-.input-wrap{
-    position: relative;
+/* パスワード目玉アイコン装飾 */
+
+#eye_icon{
+	position: absolute;
+	top: auto;
+	left: auto;
+	bottom: auto;
+	right: 40%;
 }
+
+.icon, .icon:before, .icon:after, .icon i, .icon i:before, .icon i:after { 
+  transition: all 0.4s ease;
+}
+
