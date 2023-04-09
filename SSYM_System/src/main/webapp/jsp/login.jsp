@@ -11,7 +11,12 @@
 <title>Insert title here</title>
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" href="../protected/static/css/style.css"></link>
+<link rel="stylesheet" type="text/css" href="../protected/static/css/reset.css"></link>
+<link rel="stylesheet" type="text/css" href="../protected/static/css/login.css"></link>
+
+<!-- JS -->
+<script type="text/javascript" src="../protected/static/js/jquery-3.6.3.min.js"></script>
+<script type="text/javascript" src="../protected/static/js/login.js"></script>
 
 <html>
 	<head>
@@ -19,17 +24,25 @@
 	<title>ログイン画面</title>
 	</head>
 	
-	<body style="background-color:aqua; ">
+	<body>
+		<%@ include file="header.jsp"%>
 		<main>
-			<div id="login_inputs">
-				<h1>ログイン画面</h1>
-				ID：<input id="id" value=""><br>
-				PW：<input id="pw" value=""><br>
-				<a class="btn btn-radius-solid js-next-btn" href="#">確認<i class="fas fa-angle-right fa-position-right"></i></a>
-			</div>
+				<div id="loginInputs">
+					<p>ログインID</p>
+					<input id="longinId" value=""><br>
+					<p>パスワード</p>
+					<div class="input-wrap">
+						<input id="longinPw" type="password" name="password">
+						<i class="toggle-pass fa fa-eye-slash"></i><br>
+					</div>
+						<button class="btn btn-radius-solid js-next-btn" href="#">確認<i class="fas fa-angle-right fa-position-right"></i></button>	
+				</div>
 		</main>
-	<script src="../html_css_js_jq/jsjq/jquery-3.6.3.min.js"></script>
-	<script src="../html_css_js_jq/jsjq/script.js"></script>
+		<script>
+		$(function() {
+			do_show();
+		});
+	</script>
 	
  	</body>
 </html>

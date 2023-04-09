@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+
+/* login.jsp */
+/* ---------------- */
+
+
+#loginInputs{
+	position: absolute;
+	left: 25%;
+	top: 35%;
+	right: 0;
+	bottom: 0;
+	background-color: orange;
+	width: 50%;
+	height: 40%;
+	text-align: center;
+}
+
+#loginInputs p{
+	margin-top: 5%;
+	font-size: 25px;
+	width: 100%;
+}
+
+#loginInputs button{
+	top: 5%;
+	font-size: 25px;
+	width: 25%;
+	padding: 20px;
+	background-color: blue;
+	
+}
+
+#loginInputs input{
+	font-size: 25px;
+	width: 30%;
+	border:2px grey solid;
+	margin-bottom: 2.5%;
+}
+   
+.toggle-pass{
+    position:absolute;
+    top:50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.input-wrap{
+    position: relative;
+}
