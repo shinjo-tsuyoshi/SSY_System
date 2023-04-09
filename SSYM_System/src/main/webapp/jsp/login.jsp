@@ -24,15 +24,18 @@
 	<body>
 		<%@ include file="header.jsp"%>
 		<main>
-				<div id="loginInputs">
-					<p>ログインID</p>
-					<input id="longinId"><br>
-					
-					<p>パスワード</p>
-						<input id="longinPw" type="password" name="password">
-						<div id="eye_icon" class="eye icon"></div>
-					<button class="btn btn-radius-solid js-next-btn" href="#">確認<i class="fas fa-angle-right fa-position-right"></i></button>	
+		<div id="loginTop">
+			<div id="loginInputs">
+				<p>ログインID</p>
+				<input id="longinId"><br>
+				<div id="pwBox">
+				<!-- 全角スペースがないとアイコンの場所がズレる -->
+					<p>パスワード　</p><div id="eye_icon" class="eye icon"></div>
 				</div>
+				<input id="longinPw" type="password" name="password">
+				<button class="btn btn-radius-solid js-next-btn" href="#">ログイン<i class="fas fa-angle-right fa-position-right"></i></button>	
+			</div>
+		</div>
 		</main>
 		<script>
 		$(function() {

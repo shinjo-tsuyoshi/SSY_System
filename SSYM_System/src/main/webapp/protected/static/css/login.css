@@ -4,7 +4,6 @@
 /* login.jsp */
 /* ---------------- */
 
-
 #loginInputs{
 	position: absolute;
 	left: 20%;
@@ -34,7 +33,7 @@
 	width: 30%;
 	padding: 20px;
 	background-color: rgb(110, 170, 235);
-	height: 55px;
+	height: 45px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -48,13 +47,11 @@
 
 /* パスワード目玉アイコン装飾 */
 
-#eye_icon{
-	position: absolute;
-	top: auto;
-	left: auto;
-	bottom: auto;
-	right: 40%;
-}
+#pwBox{
+	display: flex;
+  	justify-content: flex-end;
+  	align-items: center;
+  }
 
 .icon, .icon:before, .icon:after, .icon i, .icon i:before, .icon i:after { 
   transition: all 0.4s ease;

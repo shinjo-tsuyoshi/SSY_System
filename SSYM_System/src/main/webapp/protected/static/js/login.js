@@ -1,12 +1,12 @@
 
 $(function() {
 	
-	$('.icon').click(function(){
+	$('#eye_icon').click(function(){
 	  	$(this)
 	    .toggleClass('eye')
 	    .toggleClass('eye-solid');
 	    
-		let input = $(this).prev('input');
+		let input = $('#longinPw');
 	    if (input.attr('type') == 'text') {
 	      input.attr('type','password');
 	    } else {
@@ -14,15 +14,6 @@ $(function() {
 	    }
 	})
 	
-  $('.toggle-pass').on('click', function() {
-    $(this).toggleClass('fa-eye fa-eye-slash');
-    var input = $(this).prev('input');
-    if (input.attr('type') == 'text') {
-      input.attr('type','password');
-    } else {
-      input.attr('type','text');
-    }
-  });
 });
 
 /**********************************************************************************
@@ -34,7 +25,7 @@ function do_show() {
 	/*-------------------------------------------------------------------------
 	  [概要] 確認ボタンイベント
 	-------------------------------------------------------------------------*/
-	$('.js-next-btn').on('click', function() {
+	$('#js-next-btn').on('click', function() {
 		
 		// エラーチェック
 		if(!check_error()) {
