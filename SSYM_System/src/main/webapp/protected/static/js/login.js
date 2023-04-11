@@ -1,19 +1,36 @@
-
+/**********************************************************************************
+ * [概要] パスワード表示処理
+ * [詳細] 目玉アイコンクリック時にパスワードが表示・非表示になる
+ * 
+ **********************************************************************************/
 $(function() {
 	
 	$('#eye_icon').click(function(){
+		// classを追加したり削除する
 	  	$(this)
 	    .toggleClass('eye')
 	    .toggleClass('eye-solid');
 	    
-		let input = $('#longinPw');
-	    if (input.attr('type') == 'text') {
-	      input.attr('type','password');
+	    // ログインボタン
+		let inputLogin = $('#longinPw');
+		// 登録ボタン
+		let inputInsert = $('#userInsertPw');
+		
+		// ログイン画面typeの変更分岐
+	    if (inputLogin.attr('type') == 'text') {
+	      inputLogin.attr('type','password');
 	    } else {
-	      input.attr('type','text');
+	      inputLogin.attr('type','text');
 	    }
+	    
+		// 登録画面typeの変更分岐
+	   	if (inputInsert.attr('type') == 'text') {
+	      inputInsert.attr('type','password');
+	    } else {
+	      inputInsert.attr('type','text');
+	    }
+
 	})
-	
 });
 
 /**********************************************************************************
@@ -23,7 +40,7 @@ $(function() {
 function do_show() {
 
 	/*-------------------------------------------------------------------------
-	  [概要] 確認ボタンイベント
+	  [概要] ログインボタンイベント
 	-------------------------------------------------------------------------*/
 	$('#js-next-btn').on('click', function() {
 		
@@ -38,6 +55,24 @@ function do_show() {
 			
 		$(this).attr("href", "./ticket_issue.jsp");
 	});
+
+	/*-------------------------------------------------------------------------
+	  [概要] 登録ボタンイベント
+	-------------------------------------------------------------------------*/
+	$('#js-insert-btn').on('click', function() {
+		
+		// エラーチェック
+		if(!check_error()) {
+			return;
+		}
+		
+		// ticket_issueへ入力された値を渡す
+		sessionStorage.setItem("userInsertId", $('#userInsertId').val());
+		sessionStorage.setItem("userInsertPw", $('#userInsertPw').val());
+			
+		$(this).attr("href", "./ticket_issue.jsp");
+	});
+
 }
 
 /**********************************************************************************
@@ -46,13 +81,13 @@ function do_show() {
  * return true 正常, false エラー
  **********************************************************************************/
 function check_error() {
-	
-	if($('#longinId').val() == "" || $('#longinId').val() == "") {
+	// ログイン・登録のID値がない場合
+	if($('#longinId').val() == "" || $('#userInsertId').val() == "") {
 		window.confirm( "ログインIDを入力してください。" );
 		return false;
 	}
-	
-	if($('#longinPw').val() == "" || $('#longinPw').val() == "") {
+	// ログイン・登録の値がない場合
+	if($('#longinPw').val() == "" || $('#userInsertPw').val() == "") {
 		window.confirm( "パスワードを入力してください。" );
 		return false;
 	}

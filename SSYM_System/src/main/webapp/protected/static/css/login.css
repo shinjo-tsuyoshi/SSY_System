@@ -6,13 +6,13 @@
 
 #loginInputs{
 	position: absolute;
-	left: 20%;
+	left: 30%;
 	top: 35%;
 	right: auto;
 	bottom: 0;
 	background-color: orange;
 	
-	width: 60%;
+	width: 40%;
 	height: 40%;
 	text-align: center;
 	
@@ -37,6 +37,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: 1vh;
+}
+
+#loginInputs button:hover{
+	color: #dc6688;
+	text-decoration: inherit;
 }
 
 #loginInputs input{
@@ -57,3 +63,18 @@
   transition: all 0.4s ease;
 }
 
+@media (min-width: 780px){
+	
+		#loginInputs button{
+		font-size: clamp(10px, 2.9vw, 26px);
+		width: 30%;
+		padding: 20px;
+		background-color: rgb(110, 170, 235);
+		height: 45px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 10px;
+	}
+
+}
