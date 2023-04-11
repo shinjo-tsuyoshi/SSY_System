@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/*
+	共通レイアウト
+*/
+
+/*
+	main
+*/
+
+/*背景レイアウト：処理をmainで囲うこと*/
+#mainLogin{
+	background: radial-gradient(circle at 100%, #6f6e6e, #979797 50%, #d2d2d2 75%, #afafaf 60%);
+    height: 100%;
+ 	border: 1px solid #333;
+}

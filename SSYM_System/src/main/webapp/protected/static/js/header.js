@@ -4,7 +4,7 @@
 
  console.log("Hello World!");
  
- $('#hamburgerMenu').click(function(){
+ $('#hamburgerMenu').click(function() {
 	 $('#menus').toggle('#menuOpen');
 	 $('#hamburgerMenu span').toggleClass('hamburgerMenuOpen');
 	 $('.headerIcon').toggleClass('menu');
