@@ -1,21 +1,23 @@
 /**********************************************************************************
  * [概要] パスワード表示処理
  * [詳細] 目玉アイコンクリック時にパスワードが表示・非表示になる
- * 
  **********************************************************************************/
 $(function() {
+	
+		// ログインボタン
+		let inputLoginId = $('#longinId');
+		let inputLoginPw = $('#longinPw');
+		// 登録ボタン
+		let inputInsertId = $('#userInsertId');
+		let inputInsertPw = $('#userInsertPw');
+
 	
 	$('#eye_icon').click(function(){
 		// classを追加したり削除する
 	  	$(this)
 	    .toggleClass('eye')
 	    .toggleClass('eye-solid');
-	    
-	    // ログインボタン
-		let inputLogin = $('#longinPw');
-		// 登録ボタン
-		let inputInsert = $('#userInsertPw');
-		
+	    		
 		// ログイン画面typeの変更分岐
 	    if (inputLogin.attr('type') == 'text') {
 	      inputLogin.attr('type','password');
@@ -29,8 +31,40 @@ $(function() {
 	    } else {
 	      inputInsert.attr('type','text');
 	    }
-
 	})
+	
+	/*-------------------------------------------------------------------------
+	  [概要] 入力チェックイベント
+	  [詳細] 半角英数字のみ入力可能処理
+	-------------------------------------------------------------------------*/
+	// ログインID半角文字の場合
+    $(inputLoginId)
+    .off(".inputcontrol.alphanum")
+    .on("keyup.inputcontrol.alphanum", function(){
+      $(this).val($(this).val().replace(/[^0-9a-zA-Z]/g,""));
+    });
+    
+    // ログインPw半角文字の場合
+    $(inputLoginPw)
+    .off(".inputcontrol.alphanum")
+    .on("keyup.inputcontrol.alphanum", function(){
+      $(this).val($(this).val().replace(/[^0-9a-zA-Z]/g,""));
+    });
+    
+    // 登録ID半角文字の場合
+    $(inputInsertId)
+    .off(".inputcontrol.alphanum")
+    .on("keyup.inputcontrol.alphanum", function(){
+      $(this).val($(this).val().replace(/[^0-9a-zA-Z]/g,""));
+    });
+    
+    // 登録Pw半角文字の場合
+    $(inputInsertPw)
+    .off(".inputcontrol.alphanum")
+    .on("keyup.inputcontrol.alphanum", function(){
+      $(this).val($(this).val().replace(/[^0-9a-zA-Z]/g,""));
+    });
+
 });
 
 /**********************************************************************************
