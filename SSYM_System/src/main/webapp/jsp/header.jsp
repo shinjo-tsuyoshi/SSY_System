@@ -6,9 +6,8 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 		<!-- CSS 読み込み -->
-		<link rel="stylesheet" type="text/css" href="../protected/static/css/reset.css"></link>
-		<!-- <link rel="stylesheet" type="text/css" href="../protected/static/css/headerIcons.css"></link> -->
-		<link rel="stylesheet" type="text/css" href="../protected/static/css/header.css"></link>
+		<link rel="stylesheet" type="text/css" href="../protected/static/css/reset.css?<%= System.currentTimeMillis() %>">
+		<link rel="stylesheet" type="text/css" href="../protected/static/css/header.css">
 		<!-- js 読み込み -->
 		<script type="text/javascript" src="../protected/static/js/jquery-3.6.3.min.js"></script>
 	</head>
@@ -23,13 +22,12 @@
 			<div id="hamburgerMenu">
 				<div class="menu headerIcon"></div>
 			</div>
-			
 		</div>
 	</div>
 	<!-- メニュー表示時 -->
 	<div id="menus">
 		<ul id="headerMenu">
-			<li><a href="./ticket_list.jsp">TOP</a></li>
+			<!-- <li><a href="./ticket_list.jsp">TOP</a></li> -->
 			<li><a href="./ticket_issue.jsp">チケット</a></li>
 			<li><a href="./ticket_list.jsp">一覧</a></li>
 			<li><a href="./login.jsp">ログアウト</a></li>

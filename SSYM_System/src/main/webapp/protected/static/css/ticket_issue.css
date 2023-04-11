@@ -1,26 +1,37 @@
 @charset "utf-8";
 
+/* commonColor */
+
+#formArea {
+    background: radial-gradient(circle at 100%, #6f6e6e, #979797 50%, #d2d2d2 75%, #afafaf 60%);
+    height: 100%;
+	border: 1px solid #333;
+}
+
+/* -------------------------------- */
+
 form {
     margin-top: 10%;
 }
 
 #title {
     border: solid 1px #000;
-    border-radius: 3px;
 }
 
 #comment {
     border: solid 1px #000;
-    width: 90%;
+    width: 80%;
     border-radius: 3px;
+    background-color: #fff;
+    margin-left: 40px;
 }
 
-#flex_box {
+#flexBox {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 300px;
-    width: 100%;
+    width: 90%;
 }
 
 label {
@@ -37,6 +48,7 @@ input, select {
 
 input {
     padding: 5px;
+    background-color: #fff;
 }
 
 /* -------------------------------- */
@@ -47,6 +59,10 @@ aside {
     width: 30%;
     text-align: end;
     height: 100%;
+}
+
+select {
+    background-color: #fff;
 }
 
 #status {
@@ -63,7 +79,7 @@ aside {
     text-align: start;
 }
 
-#responsible_person {
+#responsiblePerson {
     margin-top: 10%;
     border: solid 1px #000;
     border-radius: 3px;
@@ -73,27 +89,40 @@ aside {
 
 /* article */
 
+article {
+	margin-top:60px;
+}
+
 #search {
     border: solid 1px #000;
     color: rgba(0, 0, 0, 0.5);
     border-radius: 3px;
 }
 
-#start_date {
+#startDate {
     border: solid 1px #000;
     border-radius: 3px;
 }
 
-#due_date {
+#dueDate {
     border: solid 1px #000;
     border-radius: 3px;
 }
 
-#labor_cost {
+#laborCost {
     border: solid 1px #000;
     border-radius: 3px;
 }
 
 #progress { 
     border: solid 1px #000;
+}
+
+#submit {
+    text-align: center;
+    background-color:rgb(46, 227, 166);
+    width: 100px;
+    border: solid 1px #000;
+    border-radius: 5px;
+    margin-left: 50px;
 }
