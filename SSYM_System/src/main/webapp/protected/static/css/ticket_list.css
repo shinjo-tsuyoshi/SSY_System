@@ -1,16 +1,93 @@
 @charset "UTF-8";
 
-#tlTitle{
-	font-size: 30px;
+/* 画面横幅全体 */
+#tlScreenSize{
+	width: 90%;
+	margin: 0 auto;
 }
 
-.tlSection{
+/* タイトル */
+#tlTitle{
+	font-size: 30px;
+	margin: 20px 0;
+}
+
+/* フィルター */
+.tlFilter{
 	width: 100%;
 	border-bottom: solid 1px black;
 }
 
-#test{
-	width: 100px;
-	height: 100px;
-	border: solid 1px black;
+#tlSelectDetails{
+	width: 100%;
+	padding: 20px 0 20px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
 }
+
+/* フィルターアイテム */
+#selectItems{
+	width: 25%;
+}
+
+.selectSerchItem{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.tlListItem{
+	width: 40%;
+}
+
+/* フィルター追加 */
+
+#addSerchItem{
+	display: flex;
+	align-items: center;
+}
+
+#tlAddFilterItem{
+	width: 7vw;
+	padding: 5px;
+	margin: 0 10px;
+	border: solid 1px black;
+	border-radius: 10%;
+}
+
+/* オプション項目 */
+#opsionItem{
+	width: 95%;
+	margin: 20px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#tlDelete,
+#tlSort{
+	border: solid 1px black;
+	padding: 1px 5px;
+	border-radius: 10%;
+}
+
+/* チケットリストテーブル */
+#tlTicketList th,
+#tlTicketList td{
+	border: solid 1px;
+	width: 10%;
+	text-align: center;
+}
+
+#tlTicketList{
+	border-collapse: collapse;
+	margin: 50px auto;
+	width: 100%;
+}
+
+#tlTicketList th{
+	background-color: aliceblue;
+}
+
