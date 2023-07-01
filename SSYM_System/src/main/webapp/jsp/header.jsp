@@ -12,6 +12,8 @@
 		<script type="text/javascript" src="../protected/static/js/jquery-3.6.3.min.js"></script>
 	</head>
 <body>
+
+
 	<!-- header -->
 	<div id="headerBgColor">
 		<div id="headerContainer">
